@@ -1,16 +1,16 @@
-
+import { Link } from 'react-router-dom';
 interface Props {
-  value: String;
-  icon: String;
+  icon: string;
+  to: string;
 }
 
-export const NavbarItem = ({ value, icon }: Props) => {
+export const NavbarItem = ({ icon, to }: Props) => {
     return (
-        <div className = "shadow-sm p-3 rounded hover:bg-gray-100">
-            <a className = "flex flex-row justify-start items-center" href="/">
-                <i className={`text-black mr-3 ${ icon } fa-2x`}></i>
-                { value }
-            </a>
-        </div>
+        <Link to = { to }>
+            <button
+                className="h-14 w-14 rounded-full dark:bg-gray-700 shadow hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none">
+                <i className = { icon }></i>
+            </button>
+        </Link>
     )
 }
