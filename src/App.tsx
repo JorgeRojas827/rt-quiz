@@ -8,6 +8,7 @@ import './app.scss'
 // import { Account } from './pages/Account';
 // import { Leaderboard } from './pages/Leaderboard';
 import { Login } from './pages/Login';
+import { Register } from './pages/Register';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,9 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path = "/login">
             <Login />
+          </Route>
+          <Route exact path = "/register">
+            <Register />
           </Route>
         </Switch>
         {/* <MainLayout>
