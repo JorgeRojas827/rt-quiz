@@ -5,7 +5,6 @@ import { Main } from "../components/Main/Main"
 import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
 
-
 interface ComponentProps {
     children: JSX.Element[] | JSX.Element;
 }

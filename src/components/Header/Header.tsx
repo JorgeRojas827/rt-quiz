@@ -17,7 +17,7 @@ export const Header = () => {
                         <figure>
                             <img src="" alt="" />
                         </figure>
-                        <h1 className = "cursor-pointer">Ultimate Quiz</h1>
+                        <h1 className = "titleLobster cursor-pointer">Ultimate Quiz</h1>
                     </Link>
                 </div>
                 <div className="col-span-2 flex space-x-5 space-x-reverse flex-row-reverse te mr-5 justify-start items-center">

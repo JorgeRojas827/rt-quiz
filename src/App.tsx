@@ -1,18 +1,24 @@
-import { Fragment } from 'react'
-import { MainLayout } from './layouts/MainLayout';
-import { Route, Switch, Redirect} from 'react-router-dom';
+import React, { Fragment } from 'react'
+// import { MainLayout } from './layouts/MainLayout';
+import { Route, Switch, /* Redirect */} from 'react-router-dom';
 import './app.scss'
-import { Menu } from './pages/Menu';
-import { Quiz } from './pages/Quiz';
-import { Stats } from './pages/Stats';
-import { Account } from './pages/Account';
-import { Leaderboard } from './pages/Leaderboard';
+// import { Menu } from './pages/Menu';
+// import { Quiz } from './pages/Quiz';
+// import { Stats } from './pages/Stats';
+// import { Account } from './pages/Account';
+// import { Leaderboard } from './pages/Leaderboard';
+import { Login } from './pages/Login';
 
-export default function App(): JSX.Element  {
+const App: React.FC = () => {
   return (
     <Fragment>
       <div className="container w-screen h-screen dark:bg-gray-900 dark:text-white">
-        <MainLayout>
+        <Switch>
+          <Route exact path = "/login">
+            <Login />
+          </Route>
+        </Switch>
+        {/* <MainLayout>
           <Switch>
               <Route exact path = "/">
                   <Menu />
@@ -29,10 +35,12 @@ export default function App(): JSX.Element  {
               <Route exact path = "/leaderboard">
                   <Leaderboard />
               </Route>
-              <Redirect to = "/"></Redirect>
           </Switch>
-        </MainLayout>
+        <Redirect to = "/login"></Redirect>
+        </MainLayout> */}
       </div>
     </Fragment>
   );
 }
+
+export default App;

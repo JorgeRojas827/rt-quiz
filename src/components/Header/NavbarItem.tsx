@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-interface Props {
+interface IProps {
   icon: string;
   to: string;
 }
 
-export const NavbarItem = ({ icon, to }: Props) => {
+export const NavbarItem = ({ icon, to }: IProps) => {
     return (
         <Link to = { to }>
             <button
